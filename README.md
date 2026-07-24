@@ -1,3 +1,22 @@
+> [!IMPORTANT]
+> **This repository is archived.** `pi-todo` now lives in [kazzarahw/pi-suite](https://github.com/kazzarahw/pi-suite)
+> as [`todo/`](https://github.com/kazzarahw/pi-suite/tree/main/todo), alongside the other six extensions.
+>
+> The install command in this README **no longer works**. It fails with
+> `Cannot find package 'pi-shared'`, because Pi installs packages with
+> `npm install --omit=dev` while this repo imported shared runtime values from a
+> `devDependency`. Consolidating the suite into a single package removed that
+> failure mode entirely — `shared/` is now an internal module rather than a
+> dependency, and CI guards it with a real `--omit=dev` install test.
+>
+> ```sh
+> pi install git:github.com/kazzarahw/pi-suite
+> ```
+>
+> Full commit history for these files is preserved in pi-suite.
+
+---
+
 # pi-todo
 
 The **agent's task list** for [Pi](https://pi.dev) — a persistent, session-aware todo list rendered as a live widget, with a gentle nudge to keep multi-step work on track.
